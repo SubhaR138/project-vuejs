@@ -147,6 +147,16 @@
     color:white;
     font-size:20px;
 }
+.feed-back{
+	background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url(images/castle.gif);
+	background-size:cover;
+    background-position:center;
+	padding-top:200px;
+	padding-bottom:200px;
+}
+.databaind-feed1 p{
+	padding-top:60px;
+}
 .menu-wrap h5{
     color:white;
     font-weight:bold;

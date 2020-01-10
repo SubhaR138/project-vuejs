@@ -119,7 +119,7 @@
               </div>
               <input type="text" id="input1">
               <button type="button" id="button">Add Recipes</button>
-              <p> we will call you soon...</p>
+              <p> we will reach you soon...</p>
             </div>
           </div>
         </div>
@@ -170,6 +170,24 @@
     </div>
   </div>
   </div>
+  <!---databinding-feedback-->
+	  <div class="feed-back" id="databind">
+	    <div class="container">
+		 <div class="databind-feed">
+		 <!--<h2 style="text-align:center;color:red;">Databinding</h2>-->
+	     <h3 style="color:blue;">We are offering a special gift</br> for telling us what you think..</h3>
+	    <input type="text" id="input" v-model="message">
+		</div>
+		
+		<div class="col-md-6 col-sm-6 col-12">
+		<div class="databind-feed1">
+		<p style="color:blue;">Your feedback :{{message}}.</p>
+		
+      </div>
+	</div>
+	</div>
+	</div>
+	</div>
 
   <!----classbinding----->
 
@@ -225,11 +243,10 @@
           </div>
         </div>
       </div>
-	  <div class="feed-back">
-	  <div id="feed-res" class="container">
-	  <h2 style="color:black;">We are offering a special gift for telling us what you think..</h2>
+	  </div>
+	  
+	  
 
-    </div>
     <div class="Recipe-gallary" id="Recipe-gallery">
       <div class="container">
         <h2>Restaurent Gallery</h2>
@@ -296,7 +313,7 @@
         </div>
       </div>
     </div>
-
+	
 
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>

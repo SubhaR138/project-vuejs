@@ -153,6 +153,15 @@ Vue.component('tabs', {
 	}
 
 });
+//databinding-feedback
+var data={message:'hi'};
+
+new Vue({
+
+	el: '#databind',
+	data: data
+
+})
 
 //Image gallery
 
