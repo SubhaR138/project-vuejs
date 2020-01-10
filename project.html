@@ -1,0 +1,310 @@
+<html>
+
+<head>
+  <title>Vue js project</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="prostyle.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css" rel="stylesheet"> -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<h5>hello</h5>
+  <!-- <body style="background:url('images/biriyani.jpg') rgba(15, 14, 14, 0.8);background-size:cover;background-blend-mode:overlay ;"> -->
+  <!-----link-->
+  <section id="header">
+    <div class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-3">
+            <a class="logo" href="#"><img src="images/download.png"></a>
+          </div>
+          <div class="col-12 col-sm-12 col-md-9">
+            <div class="tabs-bar">
+              <nav class="navbar navbar-expand-lg navbar-light">
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                  data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                  aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"><b>Home</b></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#list-adding"><b>About us</b></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><b>
+                          Menu</b>
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#Class-binding1">Indian Recipes</a>
+                        <a class="dropdown-item" href="#Class-binding2">Chinese Recipes</a>
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#Deliver"><b>HomeDelivery</b></a>
+                    </li>
+					<li class="nav-item">
+					<a class="nav-link" href="#databind"><b>Respond&win</b></a>
+					</li>
+                  </ul>
+                  <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button style="background-color:black;" class="btn btn-outline-success my-2 my-sm-0"
+                      type="submit">Search</button>
+                  </form>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!---tabs-bar-->
+
+    <!---banner section-->
+    <div class="banner-main">
+      <div class="Registration-box">
+        <!-- <img src="images/user1.png" class="user login"> -->
+        <h1>Register Here</h1>
+        <form>
+          <p>User Name</p>
+          <input type="name" name="username" placeholder="Enter Your Name">
+          <p>E-mail</p>
+          <input type="email" name="Mail id" placeholder="Enter Your E-mail">
+          <input type="address" name="useraddress" placeholder="Enter your address">
+          <input type="submit" name="submit" value="Register">
+
+
+        </form>
+      </div>
+    </div>
+  </section>
+  <!----About us/adding recipes using list-->
+
+  <div class="about-wrap" id="list-adding">
+    <div id="About-main">
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <h4 style="text-align:left;"> healthy tasty spicy healthy tasty spicy tasty spicy healthy tasty spicy
+              healthy tasty spicy healthy tasty spicy healthy tasty spicy healthy tasty spicy healthy tasty spicy
+              healthy tasty spicy healthy tasty spicy healthy tasty spicy healthy tasty spicy healthy tasty spicy
+              healthy tasty spicy healthy tasty spicy healthy tasty spicy healthy tasty spicy healthy tasty spicy
+              healthy tasty</h4>
+            <p> We are serving heathly and tasty food for the past 4 years,We are stepping into our 5th year.So we are
+              conducting "Foodie" competition,please add your best recipe idea </p>
+
+
+          </div>
+          <div class="col-6">
+            <img src="images/r1.jpg" style="width: 100%;">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <h2 style="color:orangered;text-align:center;padding:50px 0 0;">Add your Recipes</h2>
+            <div id="recipe-add" class="list-add">
+              <div class="recipe-list">
+                <ol>
+                  <li v-for="recipe in recipes" v-text="recipe"></li>
+                </ol>
+              </div>
+              <input type="text" id="input1">
+              <button type="button" id="button">Add Recipes</button>
+              <p> we will call you soon...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-------menu using class binding----->
+  <div class="menu-wrap" id="Class-binding1">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-12 col-12">
+          <div id="Indian-Menu">
+            <h1 v-bind:title="title"><span style="font-weight:bold;color:darkgreen;font-family:snap ITC;">IN</span><span
+                style="font-weight:bold;color:white;font-family:snap ITC;">DI</span><span
+                style="font-weight:bold;color:ORANGE;font-family:snap ITC;">AN</span><span
+                style="color:white;font-family:snap ITC ;"> Recipes</span>
+            </h1>
+
+
+          </div>
+          <!-----data binding with vue components and slot-->
+          <div id="recipe-tasks" class="indian-tasks">
+
+            <task-slot>Breakfast-recipes</task-slot>
+            <task-slot>Fries</task-slot>
+            <task-slot>Pot biryani</task-slot>
+
+          </div>
+        </div>
+
+
+        <div class="col-md-6 col-sm-12 col-12">
+          <div class="menu-wrap1" id="Class-binding2">
+
+          <div id="Chinese-menu">
+            <h1 v-bind:title="title-menu"><span style="color:red;font-family:snap ITC;">CHINESE</span><span
+                style="font-family:snap ITC;">Recipes</span></h1>
+          </div>
+          <div id="recipe-task1" class="chinese-tasks">
+            <task-slot>Noodles</task-slot>
+            <task-slot>Pasta</task-slot>
+            <task-slot>Veg-soup</task-slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!----classbinding----->
+
+  <!-------Home deliver/model-------->
+  <div class="book-online" id="Deliver">
+
+    <!-- <div id="modal-wrap">
+       
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-12">
+                    <h3>Place your orders here...</h3>
+                    <form action="">
+                      <input type="text" name="recipename" value="recipe">
+                    </form>
+                    <modal v-if="showModal" @close="showModal=false">
+                            <p>Your order will be delivered soon</p>
+                    </modal>
+                    
+                    <button @click="showModal=true" class="modmessage">Order Now</button>
+                </div>
+            </div>
+            </div>-->
+
+    <!-- <div class="row">
+                <div class="col-md-12 col-sm-12 col-12"> -->
+    <h3>Place your orders here...</h3>
+    <form action="">
+      <input type="text" name="recipename" value="recipe">
+    </form>
+    <div class="modal-close">
+      <button id="myBtn">ORDER NOW</button>
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+
+          <div class="text-modal">
+            <p>Your Order Will be Delivered Shortly!!!</p>
+            <div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="coupon-discount">
+      <div id="comm-wrap" class="container">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-12">
+            <h2 style="color:black;">Enter your coupon to get discount</h2>
+            <coupon @applied="onCouponApplied"></coupon>
+            <h3 v-if="couponapplied">You used a coupon</h3>
+          </div>
+        </div>
+      </div>
+	  <div class="feed-back">
+	  <div id="feed-res" class="container">
+	  <h2 style="color:black;">We are offering a special gift for telling us what you think..</h2>
+
+    </div>
+    <div class="Recipe-gallary" id="Recipe-gallery">
+      <div class="container">
+        <h2>Restaurent Gallery</h2>
+        <div class="line"></div>
+
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-12">
+            <tabs>
+              <tab name="Dining Hall" :selected="true">
+                <div class="container">
+                  <div class="myslides">
+                    <div class="numbertext">1/3</div>
+                    <a href=""><img src="images/r1.jpg" style="width:100%;"></a>
+                  </div>
+
+                  <div class="myslides">
+                    <div class="numbertext">2/3</div>
+                    <a href=""><img src="images/r2.jpg" style="width:100%;"></a>
+                  </div>
+
+                  <div class="myslides">
+                    <div class="numbertext">3/3</div>
+                    <a href=""><img src="images/r3.jpg" style="width:100%;"></a>
+                  </div>
+                  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                  <div class="row">
+                    <div class="column">
+                      <img class="demo cursor" src="images/r1.jpg" style="width:100%;" onclick="currentSlide(1)"
+                        alt="dining">
+                    </div>
+                    <div class="column">
+                      <img class="demo cursor" src="images/r2.jpg" style="width:100%;" onclick="currentSlide(2)"
+                        alt="dining1">
+                    </div>
+                    <div class="column">
+                      <img class="demo cursor" src="images/r3.jpg" style="width:100%;" onclick="currentslide(3)"
+                        alt="dining2">
+                    </div>
+                  </div>
+                </div>
+              </tab>
+              <tab name="Our Kitchen">
+                <div class="row">
+                  <div class="column">
+                    <img src="images/r4.jpg" style="width:100%;">
+                    <img src="images/r5.jpg" style="width:100%;">
+                    <img src="images/r6.jpg" style="width:100%;">
+                    <img src="images/k1.jpg" style="width:100%;">
+
+                  </div>
+                  <div class="column">
+                    <img src="images/r1.jpg" style="width:100%;">
+                    <img src="images/k1.jpg" style="width:100%;">
+                    <img src="images/r6.jpg" style="width:100%;">
+                    <img src="images/r2.jpg" style="width:100%;">
+
+                  </div>
+
+                </div>
+              </tab>
+            </tabs>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="promainn.js"></script>
+
+    <!-- <script src="tabsmain.js"></script> -->
+
+
+</body>
+
+</html>
