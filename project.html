@@ -94,13 +94,12 @@
       <div class="container">
         <div class="row">
           <div class="col-6">
-            <h4 style="text-align:left;"> healthy tasty spicy healthy tasty spicy tasty spicy healthy tasty spicy
-              healthy tasty spicy healthy tasty spicy healthy tasty spicy healthy tasty spicy healthy tasty spicy
-              healthy tasty spicy healthy tasty spicy healthy tasty spicy healthy tasty spicy healthy tasty spicy
-              healthy tasty spicy healthy tasty spicy healthy tasty spicy healthy tasty spicy healthy tasty spicy
-              healthy tasty</h4>
-            <p> We are serving heathly and tasty food for the past 4 years,We are stepping into our 5th year.So we are
-              conducting "Foodie" competition,please add your best recipe idea </p>
+          
+             
+           
+            <p>Food and Beverage Service operations involve a multitude of activities which engage the staff right from purchasing raw material, preparing food and beverage, keeping the inventory of material, maintaining service quality continuously, managing various catered events, and most importantly, analyzing the business ...<br></p>
+              <h4 class="glow">We are serving heathly and tasty food for the past 4 years,We are stepping into our 5th year.So we are
+              conducting "Foodie" competition,please add your best recipe idea</h4>
 
 
           </div>
@@ -173,21 +172,26 @@
   <!---databinding-feedback-->
 	  <div class="feed-back" id="databind">
 	    <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-12">
 		 <div class="databind-feed">
-		 <!--<h2 style="text-align:center;color:red;">Databinding</h2>-->
-	     <h3 style="color:blue;">We are offering a special gift</br> for telling us what you think..</h3>
-	    <input type="text" id="input" v-model="message">
+		 <h2 style="color:rgb(204, 168, 7);font-size:40px;font-weight:bold;">Databinding</h2>
+	     <h3 style="color:rgb(252, 5, 87);">We are offering a special gift</br> for telling us what you think..</h3>
+      <input type="text" id="input" v-model="message">
+      </div>
 		</div>
 		
-		<div class="col-md-6 col-sm-6 col-12">
+		<div class="col-md-3 col-sm-9 col-12">
 		<div class="databind-feed1">
-		<p style="color:blue;">Your feedback :{{message}}.</p>
+		<p style="color:rgb(252, 5, 87);font-size:25px;font-weight:bold;">Your feedback :{{message}}.</p>
 		
       </div>
 	</div>
 	</div>
 	</div>
 	</div>
+
+	
 
   <!----classbinding----->
 
@@ -224,26 +228,34 @@
           <span class="close">&times;</span>
 
           <div class="text-modal">
+            
             <p>Your Order Will be Delivered Shortly!!!</p>
             <div>
             </div>
           </div>
         </div>
       </div>
+    <!--computed properties-reverse text-->
+    <div id="main" class="container">
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-12">
+      <h3>Enter the below code to get discount</h3>
+     {{message.split('').reverse().join('')}}
+  </div>
+  </div>
     </div>
-
-
-    <div class="coupon-discount">
-      <div id="comm-wrap" class="container">
+  <div id="comm-wrap" class="container">
         <div class="row">
           <div class="col-md-12 col-sm-12 col-12">
-            <h2 style="color:black;">Enter your coupon to get discount</h2>
-            <coupon @applied="onCouponApplied"></coupon>
+            
+           <coupon @applied="onCouponApplied"></coupon>
             <h3 v-if="couponapplied">You used a coupon</h3>
           </div>
         </div>
       </div>
-	  </div>
+    </div>
+    
+  </div>
 	  
 	  
 
@@ -312,7 +324,7 @@
           </div>
         </div>
       </div>
-    </div>
+   
 	
 
 

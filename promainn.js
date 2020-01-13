@@ -102,7 +102,8 @@ Vue.component('coupon',{
 new Vue({
     el : '#comm-wrap',
     data:{
-        couponApplied:false
+        couponApplied:false,
+        
     },
     created(){
         Event.listen('applied',() => alert('Registered successfully'));
@@ -153,8 +154,16 @@ Vue.component('tabs', {
 	}
 
 });
+//reverse-text
+var app = new Vue({
+  el: '#main',
+  data: { 
+      message: 'Hello'
+  }
+});
+
 //databinding-feedback
-var data={message:'hi'};
+var data={message:''};
 
 new Vue({
 
@@ -236,3 +245,4 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
   captionText.innerHTML = dots[slideIndex-1].alt;
 }
+
