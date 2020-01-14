@@ -12,7 +12,7 @@
 </head>
 
 <body>
-<h5>hello</h5>
+
   <!-- <body style="background:url('images/biriyani.jpg') rgba(15, 14, 14, 0.8);background-size:cover;background-blend-mode:overlay ;"> -->
   <!-----link-->
   <section id="header">
@@ -33,10 +33,10 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                      <a class="nav-link" href="#"><b>Home</b></a>
+                      <a class="nav-link" href="#"><b>Databinding</b></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#list-adding"><b>About us</b></a>
+                      <a class="nav-link" href="#list-adding"><b>Lists</b></a>
                     </li>
                     <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -73,13 +73,19 @@
     <div class="banner-main">
       <div class="Registration-box">
         <!-- <img src="images/user1.png" class="user login"> -->
-        <h1>Register Here</h1>
+        <h1><b>Register Here</b></h1>
         <form>
           <p>User Name</p>
-          <input type="name" name="username" placeholder="Enter Your Name">
+          <div id="databindn">
+          <input type="text" name="username" placeholder="Enter Your Name" v-model="messagen">
+          <p style="font-weight: lighter;color:grey;">Your name:{{messagen}}</p>
+          </div>
           <p>E-mail</p>
-          <input type="email" name="Mail id" placeholder="Enter Your E-mail">
-          <input type="address" name="useraddress" placeholder="Enter your address">
+          <input type="text" name="Mail id" placeholder="Enter Your E-mail">
+          <div id="databind-name">
+          <input type="text" name="password" placeholder="Write Your address" v-model="message">
+          <p style="font-weight: lighter;color:grey;">Your address:{{message}}</p>
+          </div>
           <input type="submit" name="submit" value="Register">
 
 
@@ -197,6 +203,9 @@
 
   <!-------Home deliver/model-------->
   <div class="book-online" id="Deliver">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
 
     <!-- <div id="modal-wrap">
        
@@ -230,30 +239,26 @@
           <div class="text-modal">
             
             <p>Your Order Will be Delivered Shortly!!!</p>
-            <div>
+          </div>
             </div>
           </div>
         </div>
       </div>
     <!--computed properties-reverse text-->
-    <div id="main" class="container">
-      <div class="row">
-        <div class="col-md-12 col-sm-12 col-12">
+    <div class="col-sm-6">
+    <div class="rev-text" id="main">
       <h3>Enter the below code to get discount</h3>
      {{message.split('').reverse().join('')}}
-  </div>
-  </div>
     </div>
-  <div id="comm-wrap" class="container">
-        <div class="row">
-          <div class="col-md-12 col-sm-12 col-12">
-            
-           <coupon @applied="onCouponApplied"></coupon>
-            <h3 v-if="couponapplied">You used a coupon</h3>
-          </div>
-        </div>
+  <div id="comm-wrap">
+      <coupon @applied="onCouponApplied"></coupon>
+        <h3 v-if="couponapplied">You used a coupon</h3>
+      </div>
       </div>
     </div>
+    </div>
+    </div>
+  </div>
     
   </div>
 	  

@@ -1,3 +1,15 @@
+//databiniding
+var data={messagen:''}
+new Vue({
+  el:'#databindn',
+  data:data
+})
+var data={message:''}
+new Vue({
+  el:'#databind-name',
+  data:data
+})
+//Lists
 var app = new Vue({
       el: '#recipe-add',
       data: {
@@ -79,7 +91,7 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
-//coupon
+//coupon component
 window.Event=new class{
     constructor(){
         this.vue=new Vue();
