@@ -11,10 +11,10 @@ new Vue({
 })
 //Lists
 var app = new Vue({
-      el: '#recipe-add',
-      data: {
-             recipes: []
-            }
+  el: '#recipe-add',
+  data: {
+         recipes: []
+        }
 });
 document.querySelector('#button').addEventListener('click', () => {
 let recipe = document.querySelector('#input1');
@@ -47,6 +47,36 @@ Vue.component('task-slot',{
 });
 new Vue({
     el:'#recipe-task1'
+});
+
+var app2 = new Vue({
+    
+  el: '#class-bind',
+  data: {
+      isLoading: false,
+     
+  },
+  
+  methods: {
+      toggleClass(){
+          this.isLoading = true;
+      }
+  }
+
+});
+var app3 = new Vue({
+    
+  el: '#class-bind1',
+  data: {
+      isLoading: false
+  },
+  
+  methods: {
+      toggleClass(){
+          this.isLoading = true;
+      }
+  }
+
 });
 // Vue.component('modaL', {
 
@@ -167,7 +197,7 @@ Vue.component('tabs', {
 
 });
 //reverse-text
-var app = new Vue({
+var app1 = new Vue({
   el: '#main',
   data: { 
       message: 'Hello'

@@ -68,7 +68,7 @@
       </div>
     </div>
     <!---tabs-bar-->
-
+<!--DATABINDING-TRADITIONAL METHOD-->
     <!---banner section-->
     <div class="banner-main">
       <div class="Registration-box">
@@ -93,7 +93,7 @@
       </div>
     </div>
   </section>
-  <!----About us/adding recipes using list-->
+  <!----LISTS-->
 
   <div class="about-wrap" id="list-adding">
     <div id="About-main">
@@ -106,7 +106,6 @@
             <p>Food and Beverage Service operations involve a multitude of activities which engage the staff right from purchasing raw material, preparing food and beverage, keeping the inventory of material, maintaining service quality continuously, managing various catered events, and most importantly, analyzing the business ...<br></p>
               <h4 class="glow">We are serving heathly and tasty food for the past 4 years,We are stepping into our 5th year.So we are
               conducting "Foodie" competition,please add your best recipe idea</h4>
-
 
           </div>
           <div class="col-6">
@@ -125,16 +124,19 @@
               <input type="text" id="input1">
               <button type="button" id="button">Add Recipes</button>
               <p> we will reach you soon...</p>
+            
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  </div>
+</div>
+
 
   <!-------menu using class binding----->
   <div class="menu-wrap" id="Class-binding1">
+    <h1 style="text-align: center;color:orangered;">Attribute and classbinding</h1>
     <div class="container">
       <div class="row">
         <div class="col-md-6 col-sm-12 col-12">
@@ -155,6 +157,11 @@
             <task-slot>Pot biryani</task-slot>
 
           </div>
+          <div id="class-bind">
+            <p style="color:honeydew;">click here to add in your favourite list</p>
+            <button :class="{'is-loading' : isLoading}" @click = "toggleClass" style="color:honeydew;"><span style="color: rgb(17, 19, 17);">add</span>ed</button>
+            
+        </div>
         </div>
 
 
@@ -170,6 +177,11 @@
             <task-slot>Pasta</task-slot>
             <task-slot>Veg-soup</task-slot>
           </div>
+          <div id="class-bind1">
+            <p style="color:honeydew;">click here to add in your favourite list</p>
+            <button :class="{'is-loading' : isLoading}" @click = "toggleClass" style="color:honeydew;"><span style="color: rgb(17, 19, 17);">add</span>ed</button>
+            
+        </div>
         </div>
       </div>
     </div>
