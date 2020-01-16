@@ -213,8 +213,6 @@ new Vue({
 	data: data
 
 })
-
-
 //Image gallery
 
 Vue.component('tab', {
@@ -288,4 +286,3 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
   captionText.innerHTML = dots[slideIndex-1].alt;
 }
-
