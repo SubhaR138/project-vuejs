@@ -214,6 +214,7 @@ new Vue({
 
 })
 
+
 //Image gallery
 
 Vue.component('tab', {

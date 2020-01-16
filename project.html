@@ -97,6 +97,10 @@
 
   <div class="about-wrap" id="list-adding">
     <div id="About-main">
+      <div class="list-hover">
+      <h1 style="text-align: center;color:orangered;font-family: snap ITC;">Lists</h1>
+      </div>
+      <div class="line"></div>
       <div class="container">
         <div class="row">
           <div class="col-6">
@@ -114,7 +118,7 @@
         </div>
         <div class="row">
           <div class="col-12">
-            <h2 style="color:orangered;text-align:center;padding:50px 0 0;">Add your Recipes</h2>
+            <h2 style="color:orangered;text-align:center;padding:50px 0 0;font-family: snap ITC;">Add your Recipes</h2>
             <div id="recipe-add" class="list-add">
               <div class="recipe-list">
                 <ol>
@@ -136,7 +140,10 @@
 
   <!-------menu using class binding----->
   <div class="menu-wrap" id="Class-binding1">
-    <h1 style="text-align: center;color:orangered;">Attribute and classbinding</h1>
+    <div class="hover-binding">
+    <h1 style="text-align: center;color:orangered;font-family: snap ITC;">Attribute and classbinding</h1>
+    </div>
+    <div class="line"></div>
     <div class="container">
       <div class="row">
         <div class="col-md-6 col-sm-12 col-12">
@@ -189,11 +196,13 @@
   </div>
   <!---databinding-feedback-->
 	  <div class="feed-back" id="databind">
+      <h2 style="color:rgb(252, 5, 87);font-size:40px;font-weight:bold;text-align:center;padding-left:20px;font-family: snap ITC;">Databinding</h2>
+      <div class="line"></div>
 	    <div class="container">
         <div class="row">
           <div class="col-md-8 col-sm-6 col-12">
 		 <div class="databind-feed">
-		 <h2 style="color:rgb(204, 168, 7);font-size:40px;font-weight:bold;">Databinding</h2>
+		 
 	     <h3 style="color:rgb(252, 5, 87);">We are offering a special gift</br> for telling us what you think..</h3>
       <input type="text" id="input" v-model="message">
       </div>
@@ -201,20 +210,26 @@
 		
 		<div class="col-md-3 col-sm-9 col-12">
 		<div class="databind-feed1">
+      <h3>Hover your cursor below</h3>
 		<p style="color:rgb(252, 5, 87);font-size:25px;font-weight:bold;">Your feedback :{{message}}.</p>
 		
       </div>
 	</div>
 	</div>
-	</div>
+  </div>
+ 
+   
+  
 	</div>
 
 	
 
-  <!----classbinding----->
+  <!----components&custom events----->
 
   <!-------Home deliver/model-------->
   <div class="book-online" id="Deliver">
+    <h1 style="color:rgb(240, 146, 6);padding-top:0px;font-family: snap ITC">Components&custom events</h1>
+    <div class="line"></div>
     <div class="container">
       <div class="row">
         <div class="col-sm-6">
@@ -238,7 +253,9 @@
 
     <!-- <div class="row">
                 <div class="col-md-12 col-sm-12 col-12"> -->
-    <h3>Place your orders here...</h3>
+                  <br>
+    <h3 style="color:orange;">Place your orders here...</h3>
+    <br>
     <form action="">
       <input type="text" name="recipename" value="recipe">
     </form>
@@ -250,7 +267,7 @@
 
           <div class="text-modal">
             
-            <p>Your Order Will be Delivered Shortly!!!</p>
+            <p>Component exercise:Modal<br>Your Order Will be Delivered Shortly!!!</p>
           </div>
             </div>
           </div>
@@ -259,7 +276,8 @@
     <!--computed properties-reverse text-->
     <div class="col-sm-6">
     <div class="rev-text" id="main">
-      <h3>Enter the below code to get discount</h3>
+      <br>
+      <h3 style="color:orange;">Enter the below code to get discount</h3>
      {{message.split('').reverse().join('')}}
     </div>
   <div id="comm-wrap">
@@ -277,10 +295,9 @@
 	  
 
     <div class="Recipe-gallary" id="Recipe-gallery">
-      <div class="container">
-        <h2>Restaurent Gallery</h2>
-        <div class="line"></div>
-
+      <h2 style="text-align: center;color:rgb(7, 7, 7);font-family: snap ITC;"><b>Tabs</b></h2>
+      <div class="line"></div>
+       <div class="container">
         <div class="row">
           <div class="col-md-12 col-sm-12 col-12">
             <tabs>
@@ -319,21 +336,28 @@
                 </div>
               </tab>
               <tab name="Our Kitchen">
-                <div class="row">
-                  <div class="column">
+               
+                  <div class="row">
+                    <div class="column">
                     <img src="images/r4.jpg" style="width:100%;">
                     <img src="images/r5.jpg" style="width:100%;">
                     <img src="images/r6.jpg" style="width:100%;">
                     <img src="images/k1.jpg" style="width:100%;">
-
-                  </div>
-                  <div class="column">
+                    </div>
+                    <div class="column">
+                
                     <img src="images/r1.jpg" style="width:100%;">
                     <img src="images/k1.jpg" style="width:100%;">
                     <img src="images/r6.jpg" style="width:100%;">
                     <img src="images/r2.jpg" style="width:100%;">
-
-                  </div>
+                   </div>
+                   <div class="column">
+                    <img src="images/r4.jpg" style="width:100%;">
+                    <img src="images/r5.jpg" style="width:100%;">
+                    <img src="images/r6.jpg" style="width:100%;">
+                    <img src="images/k1.jpg" style="width:100%;">
+                    </div>
+                 </div>
 
                 </div>
               </tab>

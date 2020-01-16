@@ -133,6 +133,9 @@
     background-color:black;
     
 }
+/*list-hover*/
+.list-hover h1{padding: 50px 0 0;margin: 20px 0 0;}
+.list-hover h1:hover{background-color: #e40888;transition: background-color 1s ease-in-out;padding: 50px;color: #fff; font-size: 24px; font-weight: 700;} 
 .menu-wrap h1{
     text-align:left;
    margin-bottom: 20px;;
@@ -153,7 +156,7 @@
     font-size:20px;
 }
 .feed-back{
-	background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url(images/castle.gif);
+	background-image: linear-gradient(rgba(212, 21, 21, 0.1),rgba(25, 175, 235, 0.1)),url(images/castle.gif);
 	background-size:cover;
   background-position:right;
 	padding-top:200px;
@@ -164,6 +167,10 @@
   padding-top:60px;
   
 }
+/*hover-classbinding*/
+.databind-feed1 p{padding: 10px 0 0;margin: 20px 0 0;}
+.databind-feed1 p:hover{background-color: #e4ce08;transition: background-color 1s ease-in-out;padding: 50px;color: #fff; font-size: 24px; font-weight: 700;} 
+        
 #feedback-form{
 	 background-color: rose;
      width: 300px;
@@ -177,20 +184,24 @@
     font-weight:bold;
     text-align:right;
 }
+/*hover-binding*/
+.hover-binding h1{padding: 50px 0 0;margin: 20px 0 0;}
+.hover-binding h1:hover{background-color: #e4ce08;transition: background-color 1s ease-in-out;padding: 50px;color: #fff; font-size: 24px; font-weight: 700;} 
 /*glowing text*/
 .glow {
-  font-size: 20px;
+  font-family: snap ITC;
+  font-size: 18px;
   color: #fff;
   text-align: center;
   animation: glow 1s ease-in-out infinite alternate;
 }
 @-webkit-keyframes glow {
   from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e66800, 0 0 40px #e66800, 0 0 50px #e66800, 0 0 60px #e66800, 0 0 70px #e66800;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #db06ee, 0 0 40px  #db06ee, 0 0 50px  #db06ee, 0 0 60px  #db06ee, 0 0 70px  #db06ee;
   }
   
   to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #f35107, 0 0 40px #f35107, 0 0 50px #f35107, 0 0 60px #f35107, 0 0 70px #f35107, 0 0 80px #f35107;
+    text-shadow: 0 0 20px #fff, 0 0 30px #f30789, 0 0 40px #f30789, 0 0 50px #f30789, 0 0 60px #f30789, 0 0 70px #f30789, 0 0 80px #f30789;
   }
 }
 .about-wrap h1{
@@ -211,10 +222,8 @@
     padding-right:25px;
 }
 .book-online{
-    background-image: linear-gradient(to right,gray,rgb(255, 94, 0)),url(images/r3.jpg);
+  background-image: linear-gradient(rgba(8, 10, 128, 0.1),rgba(25, 175, 235, 0.1)),url(images/offer.gif);
 	  background-size:cover;
-    background-color:rgb(20, 1, 1);
-    color:black;
     text-align:center;
     padding-top: 150px;
     padding-bottom:150px;
@@ -233,6 +242,9 @@
    
 }
 /*computed prop-reversed text*/
+.rev-text{
+  color:rgb(255, 51, 0);
+}
 .rev-text h2{
   padding-top:50px;
   padding-bottom:50px;
@@ -399,4 +411,17 @@ background-size: cover;
     margin: 0 auto;
 }
 .list-add button{background:orangered; padding:2px 10px;border:none;color:#fff;}
+
+.line{width:200px; height:1px; background:rgb(88, 87, 87);position: relative;margin: 15px auto 30px;}
+.line::before {
+    content: '';
+    width: 50%;
+    height: 2px;
+    background:rgb(238, 129, 4);
+    position: absolute;
+    top: -1px;
+    left: 25%;
+}
+
+
 
